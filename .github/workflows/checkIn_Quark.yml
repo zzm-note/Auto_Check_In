@@ -6,14 +6,11 @@ name: checkIn_Quark
 on:
   schedule:
   - cron: 35 3 * * *
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_dispatch:
 
 permissions:
-  contents: write
-
+  contents: write  # 赋予读写权限
+  
 jobs:
   build:
 
