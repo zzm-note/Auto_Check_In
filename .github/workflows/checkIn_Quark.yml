@@ -34,5 +34,5 @@ jobs:
       run: |
         python3 ./checkIn_Quark.py
       env:
-        COOKIE_QUARK: ${{ secrets.cookie_quark }}
-        PUSH_KEY: ${{ secrets.push_key }}
+        COOKIE_QUARK: ${{ secrets.COOKIE_QUARK }}
+        PUSH_KEY: ${{ secrets.PUSH_KEY }}
