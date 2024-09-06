@@ -27,7 +27,6 @@ Description:
 import os
 import re
 import sys
-import time
 
 import requests
 
@@ -200,7 +199,7 @@ def main():
     while i < len(cookie_quark):
         # 获取user_data参数
         user_data = {}  # 用户信息
-        for a in cookie_quark[i].replace("timenow", str(int(time.time() * 1000))).replace(" ", "").split(';'):
+        for a in cookie_quark[i].replace(" ", "").split(';'):
             if not a == '':
                 user_data.update({a[0:a.index('=')]: a[a.index('=') + 1:]})
         # print(user_data)
